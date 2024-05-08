@@ -57,6 +57,31 @@ Now we start- you will:
 
 ✅ 5.3 Putting it all together
 
+How to export a private key from Phantom to a Keypair file:
+https://edulanasca.hashnode.dev/how-to-export-a-private-key-from-phantom-to-a-keypair-file
+
+"Did you create a wallet directly from Phantom and now you want to use it in the Solana CLI? This simple tutorial explains how to do that."
+
+```ts
+import { Keypair } from '@solana/web3.js';
+import base58 from "bs58";
+import * as fs from 'fs';
+
+const PRIVATE_KEY = ""; // Private key from phantom
+const PUBLIC_KEY = ""; // Public address for that key
+const secret = base58.decode(PRIVATE_KEY);
+
+// Check if the private key is correct
+const pair = Keypair.fromSecretKey(secret);
+
+if (pair.publicKey.toString() == PUBLIC_KEY) {
+  fs.writeFileSync(
+    'private_key.json',
+    JSON.stringify(Array.from(secret))
+  );
+}
+
+```
 
 ✅ Success! Check out your TX here:
 
