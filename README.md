@@ -44,6 +44,7 @@ Now we start- you will:
 ✅ 4. Empty devnet wallet into WBA wallet
 
   https://explorer.solana.com/tx/4PEKMLpvrgJTQ3bg3PWko3KP8HHQ5kH7H1zG98eJmrbBL8GsEuHZZWHjzgJ41eoVMNLYt1zMNQ5TqFftRE3VnCYi?cluster=devnet
+
 ✅ 5. Submit your completion of the WBA pre-requisites program
 
   * make sure to use gitignore on wallets
